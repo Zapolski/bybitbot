@@ -1,0 +1,26 @@
+spring:
+  application:
+  name: bybitbot
+  main:
+    web-application-type: none
+
+
+trade:
+  api-key: put_your_api_key
+  api-secret: put_your_api_secret
+  symbol: SUIUSDT
+  take-profit-percent: 2.4
+  stop-loss-percent: 0.8
+  usdt-position-value: 4000
+  initiate-position-side: Sell
+  # добавить открытие позиции по количеству монет (нужно для корректного разворота)
+  # при открытии позиции добавить TP/SL в зависимости от для безопасности
+  mark-price:
+    pulling:
+      delay: 60s
+  timeout: 4s
+  
+  # данные по открытой позиции
+  # очень внимательно эти два поля заполнять надо
+  position-side: Sell
+  position-mark-price: 1.86900
